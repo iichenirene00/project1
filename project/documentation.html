@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - weatherstack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="./project1.html"><img src="./images/weatherstack_logo_white.png" alt="logo"></a>
+            <ul class="navs">
+                <li> <a href="./pricing.html">Pricing</a></li>
+                <li> <a href="./documentation.html">Documentation</a></li>
+                <li> <a href="#">FAQ</a></li>
+                <li> <a href="#">Blog</a></li>
+                <li> <a class="status" href="#">Status</a></li>
+                <li> <a class="log" href="#">Log In</a></li>
+                <li> <a class="sign" href="#">SIGN UP FREE</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="guide">
+        <div class="guide_container">
+            <div class="gleft">
+                <h1>3-Step Quickstart Guide</h1>
+                <p>Feel like jumping right into making API calls? Get a free weatherstack <br /> account and simply use
+                    our
+                    3-Step Quickstart Guide.</p>
+                <a href="">GET FREE ACCESS</a>
+            </div>
+            <div class="gright">
+                <h1>Code Examples</h1>
+                <p>Our API supports all major programming languages. Click below to <br /> browse through examples in
+                    PHP,
+                    Python, Node, jQuery and Ruby.</p>
+                <a href="">CODE EXAMPLES</a>
+            </div>
+        </div>
+    </div>
+    <div class="api_doc_container">
+        <div class="api_doc">
+            <aside>
+                <ul>
+                    <li>
+                        <h2>Getting Started</h2>
+                    </li>
+                    <li><a href="">API Authentication</a></li>
+                    <li> <a href="">HTTPS Encryption</a> </li>
+                    <li> <a href="">API Error Codes</a> </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h2>API Features</h2>
+                    </li>
+                    <li> <a href="">Current Weather</a> </li>
+                    <li> <a href="">Historical Weather</a> </li>
+                    <li> <a href="">Historical Time-Series</a> </li>
+                    <li> <a href="">Weather Forecast</a> </li>
+                    <li> <a href="">Location Lookup</a> </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h2>Options</h2>
+                    </li>
+                    <li> <a href="">Query Parameter</a> </li>
+                    <li> <a href="">Units Parameter</a> </li>
+                    <li> <a href="">Language Parameter</a> </li>
+                    <li> <a href="">JSONP Callbacks</a> </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h2>Code Examples</h2>
+                    </li>
+                    <li> <a href="">PHP</a> </li>
+                    <li> <a href="">Python</a> </li>
+                    <li> <a href="">Nodejs</a> </li>
+                    <li> <a href="">jQuery</a> </li>
+                    <li> <a href="">Go</a> </li>
+                    <li> <a href="">Ruby</a> </li>
+                </ul>
+                <a class="GitHub" href="">weatherstack on GitHub</a>
+            </aside>
+            <div class="rapi">
+                <h3>API Documentation</h3>
+                <p>Welcome to the weatherstack API documentation. Using the instructions and interactive code examples
+                    below you will be able to<br /> start making API requests in a matter of minutes. If you have an
+                    account already and prefer to skip our detailed documentation, you <br /> can also jump to our <a
+                        href="">3-Step Quickstart Guide</a> right away.
+                </p>
+                <p>
+                    The weatherstack API was built to deliver accurate weather data for any application and use case,
+                    from real-time and historical <br /> weather information all the way to 14-day weather forecasts,
+                    supporting all major programming languages. Our straightforward API <br /> design will make it easy
+                    to use
+                    the API — continue reading below to get started.
+                </p>
+            </div>
+            <div class="rapi">
+                <h3>Getting Started</h3>
+                <h4>API Authentication</h4>
+                <p>The first step to using the API is to authenticate with your weatherstack account's unique API access
+                    key, which can be found in your <br /> account dashboard after registration. To authenticate with
+                    the API, simply use the base URL below and pass your API access key to<br /> can also jump to our
+                    the API's <span>access_key </span> parameter.
+                </p>
+                <h5>Example API Request:</h5>
+                <div class="code">
+                    <p>https://api.weatherstack.com/current</p>
+                    <a href="">Sign Up to Run API Request</a>
+                    <p class="yellow indent">? access_key = YOUR_ACCESS_KEY</p>
+                    <p class="indent"> & query = New York</p>
+                </div>
+                <div class="warning">
+                    <p> <strong>Keep it safe:</strong> &nbsp;Please make sure to keep your API access key and do not
+                        expose it
+                        in any publicly available part of your application. <br /> If you ever want to reset your key,
+                        simply
+                        head over to your account dashboard to do so. </p>
+                </div>
+            </div>
+            <div class="rapi">
+                <h4>256-bit HTTPS Encryption</h4>
+                <p>Clients using the Standard Plan or higher can connect to the weatherstack using industry-standard
+                    SSL (HTTPS) by attaching an <span>s</span> <br /> to the HTTP protocol as shown in the example API
+                    request below.
+                </p>
+                <h5>Example API Request:</h5>
+                <div class="code">
+                    <p>
+                    <p class="yellow">https
+                    </p>://api.weatherstack.com/...
+                    </p>
+                </div>
+                <p>
+                    If you are currently on the Free Plan and would like to use the HTTPS API in production, please
+                    <a href="">upgrade your account</a>now. You can <br /> also learn more about available plans on our
+                    <a href="">Pricing
+                        Overview.</a>
+                </p>
+            </div>
+            <div class="rapi">
+                <h4>API Error Codes</h4>
+                <p>Whenever an API request fails, the weatherstack API will return an error object in lightweight JSON
+                    format. Each error object<br /> contains an error code, an error type and an info object containing
+                    details about the error that occurred. Below you will find an <br /> example error as well as a list
+                    of common API errors.
+                </p>
+                <h5>Example API Error:</h5>
+                <div class="code">
+                    <p>
+                        { <br />
+                    <p class="yellow indent">"success"</p> : <p class="green">false</p>,<br />
+                    <p class="yellow indent">"error"</p>: {<br />
+                    <p class="yellow1">"code"</p>: <p class="green">104</p>,<br />
+                    <p class="yellow1">"type"</p>: <p class="yellow">"usage_limit_reached"</p>,<br />
+                    <p class="yellow1">"info"</p>: <p class="yellow">"Your monthly API request volume has
+                        been reached. Please upgrade your plan."</p><br />
+                    <p class="indent">}</p>
+                    }<br />
+                    </p>
+                </div>
+                <div class="rapi">
+                    <h5>Common API Errors:</h5>
+                    <table cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Type</th>
+                                <th>Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <span>404</span>
+                                </td>
+                                <td><span>404_not_found</span></td>
+                                <td>User requested a resource which does not exist.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>101</span>
+                                </td>
+                                <td><span>missing_access_key</span></td>
+                                <td>User did not supply an access key.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>101</span>
+                                </td>
+                                <td><span>invalid_access_key</span></td>
+                                <td>User supplied an invalid access key.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>102</span>
+                                </td>
+                                <td><span>inactive_user</span></td>
+                                <td>User account is inactive or blocked.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>103</span>
+                                </td>
+                                <td><span>invalid_api_function</span></td>
+                                <td>User requested a non-existent API function.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>104</span>
+                                </td>
+                                <td><span>usage_limit_reached</span></td>
+                                <td>User has reached his subscription's monthly request allowance.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>105</span>
+                                </td>
+                                <td><span>function_access_restricted</span></td>
+                                <td>The user's current subscription does not support this API function.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>105</span>
+                                </td>
+                                <td><span>https_access_restricted</span></td>
+                                <td>The user's current subscription plan does not support HTTPS.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>602</span>
+                                </td>
+                                <td><span>no_results</span></td>
+                                <td>The API request did not return any results.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>603 </span>
+                                </td>
+                                <td><span>historical_queries_not_supported_on_plan</span></td>
+                                <td>Historical data is not supported on the current subscription plan.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>604</span>
+                                </td>
+                                <td><span>bulk_queries_not_supported_on_plan</span></td>
+                                <td>Bulk queries is not supported on the current subscription plan.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>605</span>
+                                </td>
+                                <td><span>invalid_language</span></td>
+                                <td>An invalid language code was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>601</span>
+                                </td>
+                                <td><span>missing_query</span></td>
+                                <td>An invalid (or missing) query value was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>606 </span>
+                                </td>
+                                <td><span>invalid_unit</span></td>
+                                <td>An invalid unit value was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>607</span>
+                                </td>
+                                <td><span>invalid_interval</span></td>
+                                <td>An invalid interval value was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>608</span>
+                                </td>
+                                <td><span>invalid_forecast_days</span></td>
+                                <td>An invalid forecast days value was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>609 </span>
+                                </td>
+                                <td><span>forecast_days_not_supported_on_plan</span></td>
+                                <td>Weather forecast data is not supported on the current subscription plan.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>611</span>
+                                </td>
+                                <td><span>invalid_historical_date</span></td>
+                                <td>An invalid historical date was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>612</span>
+                                </td>
+                                <td><span>invalid_historical_time_frame</span></td>
+                                <td>An invalid historical time frame was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>613</span>
+                                </td>
+                                <td><span>historical_time_frame_too_long</span></td>
+                                <td>The specified historical time frame is too long. (Maximum: 60 days)</td>
+                            </tr>
+                            <tr>
+                                <td> <span>614</span>
+                                </td>
+                                <td><span>missing_historical_date</span></td>
+                                <td>An invalid historical date was specified.</td>
+                            </tr>
+                            <tr>
+                                <td> <span>615 </span>
+                                </td>
+                                <td><span>request_failed</span></td>
+                                <td>API request has failed.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="rapi">
+                <h3>API Features</h3>
+                <h4 class="cw">Current Weather</h4>
+                <p>To query the weatherstack API for real-time weather data in a location of your choice, simply attach
+                    your preferred location to the<br /> API's <span>current</span> endpoint as seen in the example
+                    request below. Depending on your subscription, you can also make a bulk location<br /> request by
+                    passing multiple semicolon-separated locations to the API URL.
+                </p>
+                <h5>Example API Request:</h5>
+                <div class="code">
+                    <p>https://api.weatherstack.com/current</p>
+                    <a href="">Sign Up to Run API Request</a>
+                    <p class="yellow indent">? access_key = YOUR_ACCESS_KEY</p>
+                    <p class="indent"> & query = New York</p>
+                </div>
+                <h5>HTTP GET Request Parameters:</h5>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="c1">Object</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <span>access_key</span>
+                            </td>
+                            <td><strong>[Required]</strong> Your API access key, which can be found in your <a
+                                    href="">acccount
+                                    dashboard</a> .</td>
+                        </tr>
+                        <tr>
+                            <td> <span>query</span>
+                            </td>
+                            <td><strong>[Required]</strong> Use this parameter to pass a single location or multiple
+                                semicolon-separated
+                                location identifiers to the API. Learn more about the <a href="">Query Parameter</a> .
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>units</span>
+                            </td>
+                            <td>[Optional] Use this parameter to pass one of the unit identifiers ot the API:
+                                <ul>
+                                    <li> <span>m </span> for Metric</li>
+                                    <li> <span>s</span> for Scientific</li>
+                                    <li> <span>f</span> for Fahrenheit</li>
+                                </ul>
+                                Learn more about the <a href=""> Units Parameter</a>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>language</span>
+                            </td>
+                            <td>[Optional] Use this parameter to specify your preferred API response language using its
+                                ISO-code. (Default: unset, English) Learn more about the <a href="">Language
+                                    Parameter</a> .</td>
+                        </tr>
+                        <tr>
+                            <td> <span>callback</span>
+                            </td>
+                            <td>[Optional] Use this parameter to specify a JSONP callback function name to wrap your API
+                                response in. Learn more about <a href="">JSONP Callbacks.</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rapi">
+                <h5 class="exclude">Example API Request:</h5>
+                <p>The successful API request from the example above now returns real-time weather data for the city of
+                    New York, including detailed <br />information about temperature, humidity, wind, clouds, pressure,
+                    the current time, a series of location identifiers, and more.</p>
+                <div class="code">
+                    <p>
+                        { <br />
+                    <p class="yellow indent">"success"</p> : <p class="green">false</p>,<br />
+                    <p class="yellow indent">"error"</p>: {<br />
+                    <p class="yellow1">"code"</p>: <p class="green">104</p>,<br />
+                    <p class="yellow1">"type"</p>: <p class="yellow">"usage_limit_reached"</p>,<br />
+                    <p class="yellow1">"info"</p>: <p class="yellow">"Your monthly API request volume has
+                        been reached. Please upgrade your plan."</p><br />
+                    <p class="indent">}</p>
+                    }<br />
+                    </p>
+                </div>
+            </div>
+            <div class="rapi">
+                <h5>API Response Objects:</h5>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="c1">Response Object</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>type</span>
+                            </td>
+                            <td>Returns the type of location lookup used for this request. Possible values:
+                                <ul>
+                                    <li> City</li>
+                                    <li> LatLon</li>
+                                    <li> IP</li>
+                                    <li> Zipcode</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>query</span>
+                            </td>
+                            <td>[Returns the exact location identifier query used for this request.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>language</span>
+                            </td>
+                            <td>Returns the ISO-Code of the language used for this request.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>unit</span>
+                            </td>
+                            <td>Returns the unit identifier used for this request:
+                                <ul>
+                                    <li> <span>m </span> for Metric</li>
+                                    <li> <span>s</span> for Scientific</li>
+                                    <li> <span>f</span> for Fahrenheit</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>name</span>
+                            <td>Returns the name of the location used for this request.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>country</span>
+                            <td>Returns the country name associated with the location used for this request.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>region</span>
+                            <td>Returns the region name associated with the location used for this request.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>lat</span>
+                            <td>Returns the latitude coordinate associated with the location used for this request.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>lon</span>
+                            <td>Returns the longitude coordinate associated with the location used for this request.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>timezone_id</span>
+                            <td>Returns the timezone ID associated with the location used for this request. (Example:
+                                <span>America/New_York</span> )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>localtime</span>
+                            <td>Returns the local time of the location used for this request. (Example: <span>2019-09-07
+                                    08:14</span> )</td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>localtime_epoch</span>
+                            <td>Returns the local time (as UNIX timestamp) of the location used for this request.
+                                (Example: <span>1567844040</span> )</td>
+                        </tr>
+                        <tr>
+                            <td> <span>location</span> &gt; <span>utc_offset</span>
+                            <td>Returns the UTC offset (in hours) of the timezone associated with the location used for
+                                this request. (Example: <span>-4.0</span> )</td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>observation_time</span>
+                            <td>Returns the UTC time for when the returned whether data was collected.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>temperature</span>
+                            <td>Returns the temperature in the selected unit. (Default: Celsius)</td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>weather_code</span>
+                            <td>Returns the universal weather condition code associated with the current weather
+                                condition. You can download all available weather codes using this link: <a class="td_a"
+                                    href="">Download
+                                    Weather Codes (ZIP file)</a> </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>weather_icons</span>
+                            <td>Returns one or more PNG weather icons associated with the current weather condition.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>weather_descriptions</span>
+                            <td>Returns one or more weather description texts associated with the current weather
+                                condition.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>wind_speed</span>
+                            <td>Returns the wind speed in the selected unit. (Default: kilometers/hour)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>wind_degree</span>
+                            <td>Returns the wind degree.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>wind_dir</span>
+                            <td>Returns the wind direction.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>pressure</span>
+                            <td>Returns the air pressure in the selected unit. (Default: MB - millibar)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>precip</span>
+                            <td>Returns the precipitation level in the selected unit. (Default: MM - millimeters)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>humidity</span>
+                            <td>Returns the air humidity level in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>cloudcover</span>
+                            <td>Returns the cloud cover level in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>feelslike</span>
+                            <td>Returns the "Feels Like" temperature in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>uv_index</span>
+                            <td>Returns the UV index associated with the current weather condition.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>current</span> &gt; <span>visibility</span>
+                            <td>Returns the visibility level in the selected unit. (Default: kilometers)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rapi">
+                <h4 class="ch">Historical Weather</h4>
+                <p>To look up historical weather data all the way back to 2008, simply pass one date of your choice
+                    (later than July 2008) or multiple<br /> semicolon-separated dates to the weatherstack API's
+                    <span>historical</span> endpoint using the <span>historical_date</span> parameter.
+                </p>
+                <h5 class="exclude">Example API Response:</h5>
+                <p>The successful API request from the example above now returns real-time weather data for the city of
+                    New York, including detailed <br />information about temperature, humidity, wind, clouds, pressure,
+                    the current time, a series of location identifiers, and more.</p>
+                <div class="code">
+                    <p>https://api.weatherstack.com/
+                        historical
+                    </p>
+                    <a href="">Sign Up to Run API Request</a>
+                    <p class="indent"> ? access_key = YOUR_ACCESS_KEY</p>
+                    <p class="indent">& query = New York</p>
+                    <p class="yellow indent">? & historical_date = 2015-01-21</p>
+                </div>
+                <h5>HTTP GET Request Parameters:</h5>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="c1">Object</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <span>access_key</span>
+                            </td>
+                            <td><strong>[Required]</strong> Your API access key, which can be found in your <a
+                                    href="">acccount
+                                    dashboard</a> .</td>
+                        </tr>
+                        <tr>
+                            <td> <span>query</span>
+                            </td>
+                            <td><strong>[Required]</strong> Use this parameter to pass a single location or multiple
+                                semicolon-separated
+                                location identifiers to the API. Learn more about the <a href="">Query Parameter</a> .
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>historical_date</span>
+                            </td>
+                            <td><strong>[Required]</strong> Use this parameter to pass one historical date or multiple
+                                semicolon-separated dates to the API. (Example: <span>2015-01-21</span> for a single
+                                date or <span>2015-01-21;2015-01-22 </span> for multiple dates)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span>
+                            </td>
+                            <td>[Optional] Set this parameter to <span>1</span> (on) or <span>0</span> (off) depending
+                                on whether or not you want the API to return weather data split hourly. (Default:
+                                <span>0</span> - off)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>interval</span>
+                            </td>
+                            <td>[Optional] If hourly data is enabled, use this parameter to define the interval:
+                                <ul>
+                                    <li> <span>1 </span> hour</li>
+                                    <li> <span>3</span> hourly (default)</li>
+                                    <li> <span>6</span> hourly</li>
+                                    <li> <span>12</span> hourly (day/night)</li>
+                                    <li> <span>24</span> hourly (day average)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>units</span>
+                            </td>
+                            <td>[Optional] Use this parameter to pass one of the unit identifiers ot the API:
+                                <ul>
+                                    <li> <span>m </span> for Metric</li>
+                                    <li> <span>s</span> for Scientific</li>
+                                    <li> <span>f</span> for Fahrenheit</li>
+                                </ul>
+                                Learn more about the <a href=""> Units Parameter</a>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>language</span>
+                            </td>
+                            <td>[Optional] Use this parameter to specify your preferred API response language using its
+                                ISO-code. (Default: unset, English) Learn more about the <a href="">Language
+                                    Parameter</a> .</td>
+                        </tr>
+                        <tr>
+                            <td> <span>callback</span>
+                            </td>
+                            <td>[Optional] Use this parameter to specify a JSONP callback function name to wrap your API
+                                response in. Learn more about <a href="">JSONP Callbacks.</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rapi">
+                <h5 class="exclude">Example API Response:</h5>
+                <div class="code">
+                    <p>https://api.weatherstack.com/
+                        historical
+                    </p>
+                    <a href="">Sign Up to Run API Request</a>
+                    <p class="indent"> ? access_key = YOUR_ACCESS_KEY</p>
+                    <p class="indent">& query = New York</p>
+                    <p class="yellow indent">? & historical_date = 2015-01-21</p>
+                </div>
+                <div class="note">
+                    <p> <strong>Please note:</strong> The response objects <span>request</span>, <span>location</span>
+                        and <span>current </span> will not be
+                        explained below as
+                        they are already mentioned in the <a href="">Current Weather Endpoint</a> section above.</p>
+                </div>
+            </div>
+            <div class="rapi">
+                <h5>API Response Objects:</h5>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="c1">Response Object</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>date</span>
+                            </td>
+                            <td>Returns the requested forecast date.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>date_epoch</span>
+                            </td>
+                            <td>Returns the requested forecast date as UNIX timestamp.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>astro</span>
+                            </td>
+                            <td>Returns a total of 6 sub response objects containing astronomic weather details, listed
+                                and explained in detail below.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>astro </span> &gt; <span>sunrise</span>
+                            </td>
+                            <td>Returns the local sunrise time in the format <span>hh:mm am/pm</span>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>astro </span> &gt; <span>sunset</span>
+                            </td>
+                            <td>Returns the local sunset time in the format <span>hh:mm am/pm</span>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>astro </span> &gt; <span>moonrise</span>
+                            </td>
+                            <td>Returns the local moonrise time in the format <span>hh:mm am/pm</span>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>astro </span> &gt; <span>moonset</span>
+                            </td>
+                            <td>Returns the local moonset time in the format <span>hh:mm am/pm</span>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>astro </span> &gt; <span>moon_phase</span>
+                            </td>
+                            <td>Returns the local moon phase. Possible values:
+                                <ul>
+                                    <li> New Moon</li>
+                                    <li> Waxing Crescent</li>
+                                    <li> First Quarter</li>
+                                    <li> Waxing Gibbous</li>
+                                    <li> Full Moon</li>
+                                    <li>Waning Gibbous</li>
+                                    <li>Last Quarter</li>
+                                    <li>Waning Crescent</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>astro </span> &gt; <span>moon_illumination</span>
+                            </td>
+                            <td>Returns the moon illumination level as percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>mintemp</span>
+                            </td>
+                            <td>Returns the minimum temperature of the day in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>maxtemp</span>
+                            </td>
+                            <td>Returns the maximum temperature of the day in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>avgtemp</span>
+                            </td>
+                            <td>Returns the average temperature of the day in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>totalsnow</span>
+                            </td>
+                            <td>Returns the snow fall amount in the selected unit. (Default: Centimeters - cm)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>sunhour</span>
+                            </td>
+                            <td>Returns the number of sun hours.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>uv_index</span>
+                            </td>
+                            <td>Returns the UV index associated with the current weather condition.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>forecast</span> &gt; <span>... </span>&gt; <span>hourly</span>
+                            </td>
+                            <td>Returns a series of sub response objects containing hourly weather data, listed and
+                                explained in detail below.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>time</span>
+                            </td>
+                            <td>Returns the time as a number in 24h format:
+                                <ul>
+                                    <li> <span>0</span> = 12:00 AM</li>
+                                    <li> <span>100</span> = 1:00 AM</li>
+                                    <li> <span>200</span> = 2:00 AM</li>
+                                    <li>...</li>
+                                    <li> <span>1200</span> = 12:00 PM</li>
+                                    <li> <span>1300</span> = 13:00 PM</li>
+                                    <li> etc.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>temperature</span>
+                            </td>
+                            <td>Returns the temperature in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>wind_speed</span>
+                            </td>
+                            <td>Returns the wind speed in the selected unit. (Default: kilometers/hour)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>wind_degree</span>
+                            </td>
+                            <td>Returns the wind degree.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>wind_dir</span>
+                            </td>
+                            <td>Returns the wind direction.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>weather_code</span>
+                            </td>
+                            <td>Returns the universal weather condition code associated with the current weather
+                                condition. You can download all available weather codes using this link: <a
+                                    href="">Download Weather Codes (ZIP file)</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>weather_icons</span>
+                            </td>
+                            <td>Returns one or more PNG weather icons associated with the current weather condition.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>weather_descriptions</span>
+                            </td>
+                            <td>Returns one or more weather description texts associated with the current weather
+                                condition.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>precip</span>
+                            </td>
+                            <td>Returns the precipitation level in the selected unit. (Default: MM - millimeters)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>humidity</span>
+                            </td>
+                            <td>Returns the air humidity level in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>visibility</span>
+                            </td>
+                            <td>Returns the visibility level in the selected unit. (Default: kilometers)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>pressure</span>
+                            </td>
+                            <td>Returns the air pressure in the selected unit. (Default: MB - millibar)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>cloudcover</span>
+                            </td>
+                            <td>Returns the cloud cover level in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>heatindex</span>
+                            </td>
+                            <td>Returns the heat index temperature in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>dewpoint</span>
+                            </td>
+                            <td>Returns the dew point temperature in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>windchill</span>
+                            </td>
+                            <td>RReturns the wind chill temperature in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>windgust</span>
+                            </td>
+                            <td>Returns the wind gust speed in the selected unit. (Default: kilometers/hour)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>visibility</span>
+                            </td>
+                            <td>Returns the visibility level in the selected unit. (Default: kilometers)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>feelslike</span>
+                            </td>
+                            <td>Returns the "Feels Like" temperature in the selected unit. (Default: Celsius)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofrain</span>
+                            </td>
+                            <td>Retuns the chance of rain (precipitation) in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofremdry</span>
+                            </td>
+                            <td>Retuns the chance of remaining dry in percentage.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofwindy</span>
+                            </td>
+                            <td>Retuns the chance of being windy in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofovercast</span>
+                            </td>
+                            <td>Retuns the chance of being overcast in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofsunshine</span>
+                            </td>
+                            <td>Retuns the chance of sunshine in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceoffrost</span>
+                            </td>
+                            <td>Retuns the chance of frost in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofhightemp</span>
+                            </td>
+                            <td>Retuns the chance of high temperatures in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceoffog</span>
+                            </td>
+                            <td>Retuns the chance of fog in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofsnow</span>
+                            </td>
+                            <td>Retuns the chance of snow in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>chanceofthunder</span>
+                            </td>
+                            <td>Retuns the chance of thunder in percentage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>hourly</span> &gt; <span>uv_index</span>
+                            </td>
+                            <td>Returns the UV index associated with the current weather condition.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rapi">
+                <h4 class="ch">Location Lookup/Autocomplete</h4>
+                <p>The weatherstack API's location <span>autocomplete</span> endpoint can be used to pinpoint one or
+                    more specific locations and their<br /> identifying response objects with the aim of later passing
+                    them to a weather data endpoint. In our example below, we are looking <br />for London, United
+                    Kingdom.
+                </p>
+                <h5 class="exclude">Example API Request:</h5>
+                <div class="code">
+                    <p>https://api.weatherstack.com/
+                        historical
+                    </p>
+                    <a href="">Sign Up to Run API Request</a>
+                    <p class="indent"> ? access_key = YOUR_ACCESS_KEY</p>
+                    <p class="indent">& query = New York</p>
+                    <p class="yellow indent">? & historical_date = 2015-01-21</p>
+                </div>
+                <h5>HTTP GET Request Parameters:</h5>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="c1">Object</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <span>access_key</span>
+                            </td>
+                            <td><strong>[Required]</strong> Your API access key, which can be found in your <a
+                                    href="">acccount
+                                    dashboard</a> .</td>
+                        </tr>
+                        <tr>
+                            <td> <span>query</span>
+                            </td>
+                            <td><strong>[Required]</strong> Use this parameter to pass a single location or multiple
+                                semicolon-separated
+                                location identifiers to the API. Learn more about the <a href="">Query Parameter</a> .
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span>callback</span>
+                            </td>
+                            <td>[Optional] Use this parameter to specify a JSONP callback function name to wrap your API
+                                response in. Learn more about <a href="">JSONP Callbacks.</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rapi">
+                <h5 class="exclude">API Response:</h5>
+                <p>
+                    A successful API request will return one or multiple results that match your search query. In our
+                    example, the first array object <br />(London, United Kingdom) contains the correct result. Now that
+                    we have our identifying response objects of the target location we <br />were looking for, we can
+                    make sure that the correct location is used by other API endpoints by using one of the available
+                    location <br /> identifiers (ideally: <span>lat</span> and <span>lon</span> ) for upcoming queries.
+                </p>
+                <div class="code">
+                    <p>https://api.weatherstack.com/
+                        historical
+                    </p>
+                    <a href="">Sign Up to Run API Request</a>
+                    <p class="indent"> ? access_key = YOUR_ACCESS_KEY</p>
+                    <p class="indent">& query = New York</p>
+                    <p class="yellow indent">? & historical_date = 2015-01-21</p>
+                </div>
+                <h5>API Response Objects:</h5>
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="c1">Response Object</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>query</span>
+                            </td>
+                            <td>Returns the exact query sent to the API.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>results</span>
+                            </td>
+                            <td>Returns the number of results found as an integer.</td>
+                        </tr>
+                        <tr>
+                            <td> <span>request</span> &gt; <span>name</span>
+                            </td>
+                            <td>Returns the name of the resulting city.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="contact_container">
+        <div class="contact">
+            <span>Any technical questions left? Reach out to us, our team is happy to help.</span>
+            <a href="#">CONTACT US</a>
+        </div>
+    </div>
+    <footer>
+        <div class="social">
+            <img class="slogo" src="./images/weatherstack_logo_white.png" alt="logo">
+            <ul class="media">
+                <li><img src="./images/github.png" alt="github"></li>
+                <li><img src="./images/facebook.png" alt="facebook"></li>
+                <li><img src="./images/insta.png" alt="ins"></li>
+                <li><img src="./images/youtube.png" alt="youtube"></li>
+                <li><img src="./images/twitter.png" alt="twitter"></li>
+                <li><img src="./images/linkedin.png" alt="linkedin"></li>
+            </ul>
+            <ul class="social_list social_list1">
+                <li>PRODUCT</li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">List Your API</a></li>
+                <li><a href="">Why choose us?</a></li>
+                <li><a href="">Marketplace</a></li>
+            </ul>
+
+            <ul class="social_list">
+                <li>DOCS & HELP</li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">FAQs</a></li>
+                <li><a href="">Press</a></li>
+                <li><a href="">API Glossary</a></li>
+            </ul>
+
+            <ul class="social_list">
+                <li>ACCOUNT</li>
+                <li><a href=""> Log In </a></li>
+                <li><a href="">Forgot Password</a></li>
+                <li><a href="">FREE Signup</a></li>
+            </ul>
+
+            <ul class="social_list">
+                <li>GET IN TOUCH</li>
+                <li><a href=""> Contact </a></li>
+                <li><a href="">Get a quote</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <ul>
+                <li><a href="">Imprint / Legal </a></li>
+                <li class="line"><a href="">Privacy</a></li>
+                <li class="line"><a href="">Terms</a></li>
+                <li class="line"> <a href="">Cookie Preference</a></li>
+                <li class="line"><a href="">Sitemap</a></li>
+            </ul>
+            <p>© 2022 Weatherstack API, an <a href="">APILayer</a> product. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
